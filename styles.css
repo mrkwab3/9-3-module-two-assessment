@@ -1,0 +1,14 @@
+body {
+    background-color: lavender;
+    font-family: monospace;
+    display: grid;
+    grid-template-rows: 50px;
+}
+
+header {
+    background-color: skyblue;
+}
+
+header img {
+    width: 50px;
+}

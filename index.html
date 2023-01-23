@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Module 2 Assessment</title>
+        <script defer src="./main.js"></script>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Ghibli Review App</h1>
+            <img src="images/ghibli-logo.png" alt="ghibli-logo">
+        </header>
+
+        <main>
+            <section class="movie-selection"> <!-- Select a movie -->
+                <h2>Select a movie</h2>
+                <select name="titles" id="titles">
+                    <option value=""></option>
+                </select>
+            </section>
+
+            <section class="movie-review"> <!-- Add a review + form -->
+                <h2>Add a review</h2>
+                <form>
+                    <label for="review">Your review</label>
+                    <input type="text" id="review" name="review">
+                    <input type="submit">
+                </form>
+            </section>
+
+            <section class="movie-details"> <!-- Movie Details-->
+                <h2>Movie Details</h2>
+                <div id="display-info">
+
+                </div>
+            </section>
+
+            <section class="people"> <!-- People -->
+                <h2>People</h2>
+                <ol>
+                    
+                </ol>
+                <button id="show-people">Show People</button>
+            </section>
+
+            <section class="movie-reviews"> <!-- Reviews -->
+                <h2>Reviews</h2>
+                <ul></ul>
+                <button id="reset-reviews">Reset Reviews</button>
+            </section>
+
+        </main>
+    </body>
+</html>
