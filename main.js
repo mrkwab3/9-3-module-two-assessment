@@ -14,13 +14,19 @@ function run() {
         })
         .then(data => {
             // Movie Selection
+            let selectedMovie = ''
+            const titles = document.querySelector('select')
+
             data.forEach(movie => {
-                const titles = document.querySelector('select')
                 const option = document.createElement('option')
                 option.textContent = movie.title
                 option.value = movie.title
                 titles.append(option)
                 })
+
+            titles.addEventListener('click', (event) => {
+                selectedMovie = event.target.value
+            })
             
             // Review Section (adding and resetting)
             const form = document.querySelector('form')
@@ -32,9 +38,13 @@ function run() {
 
                 const reviewText = document.querySelector('form input[type="text"]')
                 const newReview = document.createElement('li')
+                const strong = document.createElement('strong')
+                strong.textContent = selectedMovie
 
                 newReview.textContent = reviewText.value
+                reviews.append(strong)
                 reviews.append(newReview)
+                reviewText.value = ''
               })
 
             resetReviews.addEventListener('click', (event) => {
@@ -45,8 +55,8 @@ function run() {
             
        })
         .catch(error => console.log(error))
-            // Movie Details
-            const displayInfo = document.querySelector('.display-info')
+        
+        // Movie Details
 
             
 
