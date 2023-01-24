@@ -22,12 +22,12 @@ function run() {
                 option.textContent = movie.title
                 option.value = movie.title
                 titles.append(option)
+                option.addEventListener('click', (event) => {
+                    selectedMovie = event.target.value
+                })
                 })
 
-            titles.addEventListener('click', (event) => {
-                selectedMovie = event.target.value
-            })
-            
+                
             // Review Section (adding and resetting)
             const form = document.querySelector('form')
             const resetReviews = document.querySelector('button[id="reset-reviews"]')
@@ -42,7 +42,7 @@ function run() {
                 strong.textContent = selectedMovie
 
                 newReview.textContent = reviewText.value
-                reviews.append(strong)
+                newReview.append(strong)
                 reviews.append(newReview)
                 reviewText.value = ''
               })
